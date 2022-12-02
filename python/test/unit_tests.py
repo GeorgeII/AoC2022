@@ -13,6 +13,9 @@ class TestStringMethods(unittest.TestCase):
     def test_day2_part1(self) -> None:
         self.assertEqual(day2.part1(day2_inp.split("\n")), 15)
 
+    def test_day2_part2(self) -> None:
+        self.assertEqual(day2.part2(day2_inp.split("\n")), 12)
+
 
 if __name__ == "__main__":
     unittest.main()

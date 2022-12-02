@@ -49,5 +49,35 @@ def part1(lines: List[str]) -> int:
     return score
 
 
+def _get_opposite(opponent_shape: Shape) -> Shape:
+    if opponent_shape == Shape.rock:
+        return Shape.paper
+    elif opponent_shape == Shape.paper:
+        return Shape.scissors
+    else:
+        return Shape.rock
+
+
 def part2(lines: List[str]) -> int:
-    pass
+    score = 0
+
+    for line in lines:
+        shapes = line.split(" ")
+
+        if shapes[0] == "A":
+            opponent_shape = Shape.rock
+        elif shapes[0] == "B":
+            opponent_shape = Shape.paper
+        else:
+            opponent_shape = Shape.scissors
+
+        if shapes[1] == "Z":
+            my_shape = _get_opposite(opponent_shape)
+        elif shapes[1] == "X":
+            my_shape = _get_opposite(_get_opposite(opponent_shape))
+        else:
+            my_shape = opponent_shape
+
+        score += _calculate_match_points(opponent_shape, my_shape)
+
+    return score
