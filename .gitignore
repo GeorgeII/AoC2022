@@ -4,6 +4,7 @@ data/
 
 
 
+/python/test/benchmarks
 */.pytest_cache
 
 
