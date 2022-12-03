@@ -1,4 +1,4 @@
-from code import day1, day2
+from code import day1, day2, day3
 from typing import Callable
 
 
@@ -16,3 +16,5 @@ def print_results(day: int, part1: Callable = None, part2: Callable = None):
 print_results(day=1, part1=day1.part1, part2=day1.part2)
 
 print_results(day=2, part1=day2.part1, part2=day2.part2)
+
+print_results(day=3, part1=day3.part1, part2=day3.part2)

@@ -1,20 +1,26 @@
 import unittest
-from code import day1, day2
-from test.test_inputs import day1_inp, day2_inp
+from code import day1, day2, day3
+from test.test_inputs import day1_inp, day2_inp, day3_inp
 
 
 class TestStringMethods(unittest.TestCase):
     def test_day1_part1(self) -> None:
-        self.assertEqual(day1.part1(day1_inp.split("\n")), 24_000)
+        self.assertEqual(24_000, day1.part1(day1_inp.split("\n")))
 
     def test_day1_part2(self) -> None:
-        self.assertEqual(day1.part2(day1_inp.split("\n")), 45_000)
+        self.assertEqual(45_000, day1.part2(day1_inp.split("\n")))
 
     def test_day2_part1(self) -> None:
-        self.assertEqual(day2.part1(day2_inp.split("\n")), 15)
+        self.assertEqual(15, day2.part1(day2_inp.split("\n")))
 
     def test_day2_part2(self) -> None:
-        self.assertEqual(day2.part2(day2_inp.split("\n")), 12)
+        self.assertEqual(12, day2.part2(day2_inp.split("\n")))
+
+    def test_day3_part1(self) -> None:
+        self.assertEqual(157, day3.part1(day3_inp.split("\n")))
+
+    def test_day3_part2(self) -> None:
+        self.assertEqual(70, day3.part2(day3_inp.split("\n")))
 
 
 if __name__ == "__main__":
